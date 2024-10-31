@@ -1,0 +1,98 @@
+@{
+  ViewData["Title"] = "Dashboard - Analytics";
+}
+@section VendorStyles {
+<link rel="stylesheet" href="~/vendor/libs/apex-charts/apex-charts.css" />
+}
+@section VendorScripts {
+<script src="~/vendor/libs/apex-charts/apexcharts.js"></script>
+}
+@section PageScripts {
+<script src="~/js/dashboards-analytics.js"></script>
+}
+
+@* ************** Content ************** *@
+<div class="row">
+  
+  <!-- Total Revenue -->
+  
+  <!--/===========================================Data View Table================================================-->
+  <div class="container-xl mt-5">
+    <div class="text-end mb-4 d-md-flex justify-content-between align-items-center">
+    <h1>Data View Table</h1>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCenter">
+            Add Job
+        </button>
+    </a>
+</div>
+
+    <div class="card">
+  <h5 class="card-header">Job posted</h5>
+  <div class="table-responsive text-nowrap">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Job ID</th>
+          <th>Job Title</th>
+          <th>Job Description</th>
+          <th>Requirements</th>
+          <th>Location</th>
+          <th>Salary</th>
+          <th>Deadline</th>
+          <th>Status</th>
+          <th>Created_at</th>
+          <th>Updated_at</th>
+           <th>Action</th>
+            
+        </tr>
+      </thead>
+      <tbody class="table-border-bottom-0">
+        
+   
+      </tbody>
+    </table>
+  </div>
+  
+          <!-- Modal -->
+          <div class="modal fade" id="modalCenter" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="modalCenterTitle">Job Post</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="row">
+                    <div class="col mb-6">
+                      <label for="nameWithTitle" class="form-label">Name</label>
+                      <input type="text" id="nameWithTitle" class="form-control" placeholder="Enter Name">
+                    </div>
+                  </div>
+                  <div class="row g-6">
+                    <div class="col mb-0">
+                      <label for="emailWithTitle" class="form-label">Email</label>
+                      <input type="email" id="emailWithTitle" class="form-control" placeholder="xxxx&#64;xxx.xx">
+                    </div>
+                    <div class="col mb-0">
+                      <label for="dobWithTitle" class="form-label">DOB</label>
+                      <input type="date" id="dobWithTitle" class="form-control">
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide from Top Modal -->
+</div>
+  </div>
+
+
+
+
